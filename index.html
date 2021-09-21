@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Tourist PLaces</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- end loader -->
+      <!-- banner -->
+      <section class="banner_main">
+         <div class="container-fluid">
+            <div class="row d_flex ">
+               <div class="col-xl-4 col-lg-4 col-md-12">
+                  <div class="banner_main_text">
+                     <div class="titlepage">
+                        <h2>Chandramouleshwara Temple</h2>
+                        <p>The temple is said to be built sometime during the 11th or 12th century, though the exact time is unknown. While there are a few local legends regarding who built it and why, there is no concrete evidence to back it. Despite its mysterious origin, the quality and artistic value of the temple is undeniable.
+
+It is a stone structure with two Shiva Lingas. As mentioned earlier, each temple is presided over by a deity. The deity of this temple is said to be named Lord Chandramouleshwara, whom the temple is named after.</p>
+                        <a class="read_more" href="#">Read More</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-8 col-lg-8 col-md-12 padding_right">
+                  <div class="banner_main_img">
+                     <figure><img src="images/1_chandra.jpg" alt="#"/>
+                     </figure>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end banner -->
+      <!-- about -->
+      <div id="about"  class="about">
+         <div class="container-fluid">
+            <div class="row d_flex">
+               <div class="col-xl-7 col-lg-7 col-md-12 padding_lert">
+                  <div class="about_img">
+                     <figure><img src="images/about_img.jpg" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-xl-5 col-lg-5 col-md-12">
+                  <div class="about_text">
+                     <div class="titlepage">
+                        <h2>About Our Farmer</h2>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and </p>
+                        <a class="read_more" href="#">Read More</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end about -->
+      <!-- our -->
+      <div id="our"  class="our">
+         <div class="container-fluid">
+            <div class="row d_flex">
+               <div class="col-xl-5 col-lg-5 col-md-12 order_2">
+                  <div class="our_text">
+                     <div class="titlepage">
+                        <h2>Our Fields</h2>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and </p>
+                        <a class="read_more" href="#">Read More</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-7 col-lg-7 col-md-12 padding_right order_1">
+                  <div class="our_img">
+                     <figure><img src="images/our_img.jpg" alt="#"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end our -->
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>Copyright 2019 All Right Reserved By <a href="https://html.design/"> Free  html Templates</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script type="text/javascript">
+      const successCallback=(position)=>{
+        console.log(position);
+      };
+      const successCallback=(error)=>{
+        console.error(error);
+      };
+        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+        var di=dist(15.37683674079259,75.11655661442991,15.371598,75.101166);
+        //alert(di);
+        function dist(lat1,lon1,lat2,lon2){
+          Number.prototype.toRad = function() {
+          return this * Math.PI / 180;
+          }
+          var lat2 = 42.741;
+          var lon2 = -71.3161;
+          var lat1 = 42.806911;
+          var lon1 = -71.290611;
+
+          var R = 6371; // km
+          //has a problem with the .toRad() method below.
+          var x1 = lat2-lat1;
+          var dLat = x1.toRad();
+          var x2 = lon2-lon1;
+          var dLon = x2.toRad();
+          var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                          Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) *
+                          Math.sin(dLon/2) * Math.sin(dLon/2);
+          var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+          var d = R * c;
+          return d;
+        }
+      </script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
